@@ -45,6 +45,7 @@ print(test_string[-20]) # P
 print(test_string[7:10]) # for
 
 # FORMATTED STRINGS 
+# find more info about formatting here: https://colab.research.google.com/github/ipeirotis/introduction-to-python/blob/master/notes/D5-String_Formatting.ipynb#scrollTo=GDd-srjDkjSz
 first_name = 'Briahana'
 last_name = 'Maugé'
 
@@ -59,18 +60,22 @@ formatted_message = f'{first_name} [{last_name}] is a coder.'
 print(formatted_message)
 
 
-# STRING METHODS
-
+# STRING FUNCTIONS
 # len() - calculate the length of a string: general purpose and can be used on other data types
 course = 'Python for Beginners'
 print(len(course)) # -> 20
 
-# EXCLUSIVE string methods
+
+#  STRING METHODS
 # .upper(str) - converts a str to uppercase letters. DOES NOT MODIFY ORIGINAL STRING
 # .lower(str) - converts a str to loowercase letters. DOES NOT MODIFY ORIGINAL STRING
 # .find(str) - returns the index when str is FIRST spotted. returns -1 when not found. CASE SENSATIVE
 # .replace(old str, new str) - replaces the first argument with the second argument in all instances. CASE SENSATIVE
-# 'str' in string_variable - checks to see if str exsits in the string variable and returns a bool .CASE SENSATIVE
+# 'str' in string_variable - checks to see if str exsits in the string variable and returns a bool. CASE SENSATIVE
+# .split(char in quotes) - splits the string into an array based on the character in the argument
+# 'char in quotes'.join(string_variable) - joins an array into a string based on the character in quotes
+
+
 print(course.upper()) # -> PYTHON FOR BEGINNERS
 print(course.lower()) # -> python for beginners
 print(course.find('e')) # -> 12 (the first e is found at index 12)
@@ -81,3 +86,12 @@ print(course.replace('beginners', 'Absolute Beginners')) # -> Python for Beginne
 print(course.replace('n', 'm')) # -> Pythom for Begimmers
 print('Python' in course) # -> True
 print('FOR' in course) # -> False
+print(course.split(' ')) # -> ['Python', 'for', 'Beginners']
+print(course.split('e')) # -> ['Python for B', 'ginn', 'rs']
+
+course_arr = ['Python', 'for', 'Beginners']
+course_arr2 = ['Python for B', 'ginn', 'rs']
+print(''.join(course_arr)) # ->  'PythonforBeginners' (join with no space)
+print(' '.join(course_arr)) # ->  'Python for Beginners' (join with a space)
+print('e'.join(course_arr2)) # -> 'Python for Beginners' (join on the letter e)
+
