@@ -23,7 +23,7 @@ print(customer)
 # OBJECT METHODS
 # obj[key] - bracket notation, the value at that key is returned. If key doesnt exist, throws error. CASE SENSITIVE
 # .get(key) - returns the value at that key is returned. If key doesnt exist, returns 'none'
-
+# del obj[key] - deletes a key from the object
 # Problem
 # Create a program that take numbers as an input and prints out the number in written form
 
