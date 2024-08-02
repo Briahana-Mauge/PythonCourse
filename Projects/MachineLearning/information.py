@@ -45,4 +45,18 @@ pd.read_csv(file)['column'] - returns all the values in that column
  X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3) - take the args input, output and size of train sample
     # returns a touple with 4 variables with random data from the set
 accuracy_score(y_test, predictions) - returns a score for how the accurate the model algo is between 0 & 1
+
+import joblib - this is where you can get methods to save and load train models
+joblib.dump(model, 'filename.joblib') - returns an array with the file that contains our mobdel
+joblib.load('model_filename.joblib') - returns an object with the predictions
+
+import tree
+tree.export_graphviz(model, out_file='filename.dot',            - returns the decision tree in a graphical format
+                     feature_names=['age','gender']
+                     class_names=sorted(y.unique()),
+                     label='all', rounded = True, filled = True) 
+Open the .dot file in VSCode and use extension 'Graphviz Interactive Preview' to see the graph
+do cmd+shift+p, type in graphviz and press enter. the graph should open to the right: https://stackoverflow.com/questions/67313794/how-visualize-dot-file-with-graphviz-dot-stephanvs-extension-in-vscode-win
 '''
+
+# MatPlotLib - visualize a decision tree to see how a model makes predictions
